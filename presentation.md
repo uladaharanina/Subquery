@@ -55,11 +55,15 @@ ORDER BY CustomerCount DESC;
 ```
   
 
-  
-
 
 ### Best Practices
 
 - Use subqueries judiciously as they can complicate the SQL statements and may lead to performance issues.
 - Consider alternatives like joins or temporary tables if the subquery makes the query substantially slower or harder to read.
 - Always test subqueries for performance in the context of the larger database system.
+
+Source: 
+https://datagrad.medium.com/the-anatomy-of-sql-subqueries-a-data-scientists-guide-1d5410736029#:~:text=Let%E2%80%99s%20start%20by%20classifying%20subqueries%20into%20different%20types,with%20multiple%20rows.%20Table%20Subqueries%3A%20Returns%20entire%20tables.
+
+https://www.geeksforgeeks.org/sql-subquery/#
+
