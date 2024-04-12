@@ -38,8 +38,6 @@ SELECT * From (SELECT FirstName, LastName, City, Phone, Email FROM Customer) as 
 );
 
 ```
-(For Track table, we will get all rows, because unit is the same)
-
 
 - <bColumn Subqueries (Correlated):</b> A subquery that refers to columns from the outer query. Correlated subqueries are evaluated once for each row processed by the outer query.
 
