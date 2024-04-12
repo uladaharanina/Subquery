@@ -12,6 +12,15 @@ Subqueries (also known as inner queries or nested queries) are a tool for perfor
 ### Types
 - Single-row subquery: A subquery that returns only one row of results. It can be used with comparison operators such as =, >, <, etc.
 
+```
+SELECT *
+FROM Track
+WHERE UnitPrice = (
+    SELECT MAX(UnitPrice)
+    FROM Track
+);
+
+```
 
 - Multi-row subquery: A subquery that returns multiple rows of results. It can be used with operators such as IN, ANY, ALL, etc.
 
