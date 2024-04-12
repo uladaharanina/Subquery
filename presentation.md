@@ -15,6 +15,22 @@ SELECT * From (SELECT FirstName, LastName, City, Phone, Email FROM Customer) as 
 ```
   
 ### Types
+
+- <b>Scalar subquery:</b> Returns a single value <b>exactly one row and exactly one column</b>, Scalar subqueries are often used within expressions.
+```
+SELECT CustomerID, Company, FirstName, LastName, Phone, Email,
+(SELECT COUNT(*) FROM Customer WHERE Email LIKE '%gmail.com%') AS CustomerCount
+FROM Customer;
+```
+- <b>Row Subqueries</b> Returns a single row with multiple columns.It can be used with operators such as IN, ANY, ALL, etc.
+
+```
+  SELECT CustomerID, Company, FirstName, LastName, Phone, Email
+  FROM Customer
+  WHERE Email IN (SELECT Email FROM Customer WHERE Email LIKE '%gmail.com%')
+  ORDER BY Email;
+```
+
 - <b>Table Subqueries</b> Returns entire tables.
 
 ```
@@ -24,14 +40,7 @@ SELECT * From (SELECT FirstName, LastName, City, Phone, Email FROM Customer) as 
 ```
 (For Track table, we will get all rows, because unit is the same)
 
-- <b>Row Subqueries</b> Returns a single row with multiple columns.It can be used with operators such as IN, ANY, ALL, etc.
 
-```
-  SELECT CustomerID, Company, FirstName, LastName, Phone, Email
-  FROM Customer
-  WHERE Email IN (SELECT Email FROM Customer WHERE Email LIKE '%gmail.com%')
-  ORDER BY Email;
-```
 - <bColumn Subqueries (Correlated):</b> A subquery that refers to columns from the outer query. Correlated subqueries are evaluated once for each row processed by the outer query.
 
 ```
@@ -43,12 +52,7 @@ ORDER BY CustomerCount DESC;
 
 ```
   
-- <b>Scalar subquery:</b> Returns a single value <b>exactly one row and exactly one column</b>, Scalar subqueries are often used within expressions.
-```
-SELECT CustomerID, Company, FirstName, LastName, Phone, Email,
-(SELECT COUNT(*) FROM Customer WHERE Email LIKE '%gmail.com%') AS CustomerCount
-FROM Customer;
-```
+
   
 
 
