@@ -11,21 +11,14 @@ Subqueries (also known as inner queries or nested queries) are a tool for perfor
 
   ### Syntax:
 ```
-SELECT column_name
-FROM table_name
-WHERE column_name expression operator 
-    ( SELECT COLUMN_NAME  from TABLE_NAME   WHERE ... );
+
 ```
   
 ### Types
 - <b>Table Subqueries</b> Returns entire tables.
 
 ```
-SELECT *
-FROM Track
-WHERE UnitPrice = (
-    SELECT MAX(UnitPrice)
-    FROM Track
+SELECT * From (SELECT FirstName, LastName, City, Phone, Email FROM Customer) as CustomerSubquery;
 );
 
 ```
