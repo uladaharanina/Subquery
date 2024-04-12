@@ -1,8 +1,7 @@
 # Subquery
 
 ## Definition:  
-Subqueries (also known as inner queries or nested queries) are a tool for performing operations in multiple steps. 
-
+Subqueries (also known as inner queries or nested queries) are a tool for performing operations in multiple steps. Very often used for filtering, aggregation, or conditional logic.
 ## Important rules:
 
 - Subqueries can be used with SELECT, UPDATE, INSERT, and DELETE statements along with the expression operator.
@@ -14,7 +13,7 @@ Subqueries (also known as inner queries or nested queries) are a tool for perfor
 - Single-row subquery: A subquery that returns only one row of results. It can be used with comparison operators such as =, >, <, etc.
 - Multi-row subquery: A subquery that returns multiple rows of results. It can be used with operators such as IN, ANY, ALL, etc.
 - Correlated subquery: A subquery that refers to columns from the outer query. Correlated subqueries are evaluated once for each row processed by the outer query.
-- Scalar subquery: A subquery that returns a single value (single-row, single-column result). Scalar subqueries are often used within expressions.
+- Scalar subquery: Returns a single value (single-row, single-column result). Scalar subqueries are often used within expressions.
 
 ### Key Points
 
