@@ -39,7 +39,7 @@ WHERE UnitPrice = (
   WHERE Email IN (SELECT Email FROM Customer WHERE Email LIKE '%gmail.com%')
   ORDER BY Email;
 ```
-- <b>Correlated subquery: A subquery that refers to columns from the outer query. Correlated subqueries are evaluated once for each row processed by the outer query.
+- <b>Correlated subquery:</b> A subquery that refers to columns from the outer query. Correlated subqueries are evaluated once for each row processed by the outer query.
 
 ```
 SELECT CustomerID, Company, FirstName, LastName, Phone, Email,
