@@ -18,7 +18,7 @@ WHERE column_name expression operator
 ```
   
 ### Types
-- <b>Single-row subquery:</b> A subquery that returns only one row of results. It can be used with comparison operators such as =, >, <, etc.
+- <b>Table Subqueries</b> Returns entire tables.
 
 ```
 SELECT *
@@ -31,7 +31,7 @@ WHERE UnitPrice = (
 ```
 (For Track table, we will get all rows, because unit is the same)
 
-- <b>Multi-row subquery:</b> A subquery that returns multiple rows of results. It can be used with operators such as IN, ANY, ALL, etc.
+- <b>Row Subqueries</b> Returns a single row with multiple columns.It can be used with operators such as IN, ANY, ALL, etc.
 
 ```
   SELECT CustomerID, Company, FirstName, LastName, Phone, Email
@@ -39,7 +39,7 @@ WHERE UnitPrice = (
   WHERE Email IN (SELECT Email FROM Customer WHERE Email LIKE '%gmail.com%')
   ORDER BY Email;
 ```
-- <b>Correlated subquery:</b> A subquery that refers to columns from the outer query. Correlated subqueries are evaluated once for each row processed by the outer query.
+- <bColumn Subqueries (Correlated):</b> A subquery that refers to columns from the outer query. Correlated subqueries are evaluated once for each row processed by the outer query.
 
 ```
 SELECT CustomerID, Company, FirstName, LastName, Phone, Email,
