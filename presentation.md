@@ -31,7 +31,7 @@ WHERE UnitPrice = (
 ```
 (For Track table, we will get all rows, because unit is the same)
 
-- <b>Multi-row subquery: A subquery that returns multiple rows of results. It can be used with operators such as IN, ANY, ALL, etc.
+- <b>Multi-row subquery:</b> A subquery that returns multiple rows of results. It can be used with operators such as IN, ANY, ALL, etc.
 
 ```
   SELECT CustomerID, Company, FirstName, LastName, Phone, Email
