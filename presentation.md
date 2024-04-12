@@ -43,7 +43,7 @@ SELECT * From (SELECT FirstName, LastName, City, Phone, Email FROM Customer) as 
 
 ```
 
-- <bColumn Subqueries (Correlated):</b> A subquery that refers to columns from the outer query. Correlated subqueries are evaluated once for each row processed by the outer query.
+- <b>Column Subqueries (Correlated):</b> A subquery that refers to columns from the outer query. Correlated subqueries are evaluated once for each row processed by the outer query.
 
 ```
 SELECT CustomerID, Company, FirstName, LastName, Phone, Email,
