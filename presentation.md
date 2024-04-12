@@ -34,7 +34,8 @@ ORDER BY CustomerCount DESC;
 
   
 - Scalar subquery: Returns a single value (single-row, single-column result). Scalar subqueries are often used within expressions.
-``` SELECT CustomerID, Company, FirstName, LastName, Phone, Email,
+```
+SELECT CustomerID, Company, FirstName, LastName, Phone, Email,
 (SELECT COUNT(*) FROM Customer WHERE Email LIKE '%gmail.com%') AS CustomerCount
 FROM Customer;
 ```
