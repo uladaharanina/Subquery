@@ -21,9 +21,10 @@ WHERE column_name expression operator
 
 - <b>Scalar subquery:</b> Returns a single value <b>exactly one row and exactly one column</b>, Scalar subqueries are often used within expressions.
 ```
-SELECT CustomerID, Company, FirstName, LastName, Phone, Email,
-(SELECT COUNT(*) FROM Customer WHERE Email LIKE '%gmail.com%') AS CustomerCount
-FROM Customer;
+SELECT InvoiceId, CustomerId, (SELECT Count(*) FROM InvoiceLine WHERE InvoiceId = 3) AS Number_Tracks_Purchased,
+Total
+FROM Invoice AS Inv
+WHERE InvoiceId = 3;
 ```
 - <b>Row Subqueries</b> Returns a single row with multiple columns.It can be used with operators such as IN, ANY, ALL, etc.
 
