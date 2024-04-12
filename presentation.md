@@ -11,7 +11,7 @@ Subqueries (also known as inner queries or nested queries) are a tool for perfor
 
   ### Syntax:
 ```
-
+SELECT * From (SELECT FirstName, LastName, City, Phone, Email FROM Customer) as CustomerSubquery;
 ```
   
 ### Types
